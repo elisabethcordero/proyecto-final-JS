@@ -1,0 +1,49 @@
+
+.header{
+    grid-area: header;
+    
+    .navHeader{
+        height: 100px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        
+        a {
+            img{
+                &:hover{
+                    transform: rotate(360deg);
+                    transition: all 1s;
+                }
+            }
+            .logo{
+                width: 160px;
+                height: 70px;
+            }
+        }
+        .inputHeader{
+            width: 500px;
+        }
+        .iconosHeader{
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .configNav {
+            justify-content: center;
+            li {
+                a {
+                    .active {
+                        color: #202020;
+                        font-weight: bold;
+                    }
+                    &:hover {
+                        text-shadow: 1px 1px 15px #322a3b;
+                        color: #b32ab8;
+                    }
+                }
+            }
+            
+        }
+    }
+}

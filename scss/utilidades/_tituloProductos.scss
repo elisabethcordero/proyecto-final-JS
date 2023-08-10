@@ -1,0 +1,36 @@
+
+.tituloProductos{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 2rem;
+    justify-content: center;
+    display: flex;
+    align-self:center;
+}
+.tituloCard {
+    font-size: 1.25rem;
+}
+.precioCard {
+    font-size: 1.5rem;
+}
+.tituloGrad {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 25px;
+    font-size: 30px;
+    justify-content: center;
+    display: flex;
+    align-self:center; 
+    background: $bg_grad;
+}
+
+.tituloContacto {
+    font-size: 2rem;
+}

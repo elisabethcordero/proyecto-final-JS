@@ -1,0 +1,8 @@
+
+.cardHp{
+    width: 18rem;
+    &:hover {
+        opacity: 1;
+        border: silver 2px solid;
+    }
+}

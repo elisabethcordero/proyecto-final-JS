@@ -1,0 +1,39 @@
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 0.4fr 1.2fr 1fr;
+        grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navHeader {
+        height: 80px;
+    }
+    
+    .aside {
+        padding: 20px;
+        align-items: center;
+        display: none;
+    } 
+
+    .main {
+        background-color: #dddddd40;
+        min-height: 70vh;
+        margin-left: 20px;
+        margin-right:20px;
+        margin-top: 80px;
+        align-items:start;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        padding-top:40px;
+        padding-bottom:40px;
+    }
+    
+    .footer {
+     align-self: auto;
+    }
+}

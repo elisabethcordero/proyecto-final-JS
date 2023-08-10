@@ -1,0 +1,10 @@
+
+.aside{
+    background-color: #dddddd40;
+    min-height: 70vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    grid-area: aside;
+}

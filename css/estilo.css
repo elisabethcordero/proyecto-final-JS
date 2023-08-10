@@ -1,0 +1,190 @@
+body {
+  background-color: #f5f8fa; }
+
+.cardHp {
+  width: 18rem; }
+  .cardHp:hover {
+    opacity: 1;
+    border: silver 2px solid; }
+
+.tituloProductos {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 2rem;
+  justify-content: center;
+  display: flex;
+  align-self: center; }
+
+.tituloCard {
+  font-size: 1.25rem; }
+
+.precioCard {
+  font-size: 1.5rem; }
+
+.tituloGrad {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 25px;
+  font-size: 30px;
+  justify-content: center;
+  display: flex;
+  align-self: center;
+  background: linear-gradient(to right, cyan, magenta); }
+
+.tituloContacto {
+  font-size: 2rem; }
+
+.grid-container {
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.3fr 1.2fr 1fr;
+  grid-template-rows: 80px 4fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas: "header header header" "aside main main" "footer footer footer"; }
+
+.header {
+  grid-area: header; }
+  .header .navHeader {
+    height: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold; }
+    .header .navHeader a img:hover {
+      transform: rotate(360deg);
+      transition: all 1s; }
+    .header .navHeader a .logo {
+      width: 160px;
+      height: 70px; }
+    .header .navHeader .inputHeader {
+      width: 500px; }
+    .header .navHeader .iconosHeader {
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+    .header .navHeader .configNav {
+      justify-content: center; }
+      .header .navHeader .configNav li a .active {
+        color: #202020;
+        font-weight: bold; }
+      .header .navHeader .configNav li a:hover {
+        text-shadow: 1px 1px 15px #322a3b;
+        color: #b32ab8; }
+
+.aside {
+  background-color: #dddddd40;
+  min-height: 70vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  grid-area: aside; }
+
+.main {
+  background-color: #dddddd40;
+  min-height: 70vh;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: start;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  grid-area: main; }
+  .main .carouselLabel {
+    color: #0c0c0c;
+    font-size: 25px;
+    background-color: rgba(63, 61, 61, 0.2);
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    right: 0;
+    left: 0;
+    margin-top: 25px; }
+  .main .listaCompra {
+    padding: 10px;
+    margin: 27px;
+    line-height: 1.5;
+    font-size: 25px;
+    font-family: sans-serif; }
+    .main .listaCompra ol li {
+      font-family: sans-serif; }
+  .main .parrafoQuienesSomos {
+    padding: 10px;
+    margin: 10px;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 27px;
+    font-family: sans-serif; }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-content: start;
+  align-items: center;
+  grid-area: footer;
+  padding-top: 30px;
+  background: linear-gradient(to right, cyan, magenta);
+  height: auto;
+  font-size: 18px;
+  box-shadow: 0 3px 15px rgba(35, 35, 35, 0.9);
+  padding-bottom: 50px; }
+  .footer img:hover {
+    transform: rotate(360deg);
+    transition: all 1s; }
+  .footer .direccionFooter {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 2px; }
+  .footer .iconosRedes a {
+    padding: 7px; }
+    .footer .iconosRedes a img {
+      margin-top: 12px;
+      width: 40px;
+      height: 40px; }
+      .footer .iconosRedes a img:hover {
+        opacity: 3;
+        transform: scale(2); }
+
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 0.4fr 1.2fr 1fr;
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+    display: flex;
+    flex-direction: column; }
+  .navHeader {
+    height: 80px; }
+  .aside {
+    padding: 20px;
+    align-items: center;
+    display: none; }
+  .main {
+    background-color: #dddddd40;
+    min-height: 70vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 80px;
+    align-items: start;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px; }
+  .footer {
+    align-self: auto; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }

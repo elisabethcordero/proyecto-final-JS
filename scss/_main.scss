@@ -1,0 +1,45 @@
+
+.main{
+    background-color: #dddddd40;
+    min-height: 70vh;
+    margin-left: 20px;
+    margin-right:20px;
+    align-items:start;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    padding-top:40px;
+    padding-bottom:40px;
+    grid-area: main;
+    .carouselLabel {
+        color: rgb(12, 12, 12);
+        font-size: 25px;
+        background-color: rgba(63, 61, 61, 0.2);
+        font-weight: bold;
+        position: relative;
+        text-align: center;
+        right: 0;
+        left: 0;
+        margin-top: 25px;
+    }
+    .listaCompra {
+        padding: 10px;
+        margin: 27px;
+        line-height: 1.5;
+        font-size: 25px;
+        font-family:sans-serif;
+        ol{
+            li{
+                font-family: sans-serif;
+            }
+        }
+    }
+    .parrafoQuienesSomos {
+        padding: 10px;
+        margin: 10px;
+        line-height: 1.5;
+        text-align:center;
+        font-size: 27px;
+        font-family:sans-serif;
+    }
+}

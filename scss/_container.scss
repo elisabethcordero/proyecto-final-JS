@@ -1,0 +1,13 @@
+
+.grid-container{
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.3fr 1.2fr 1fr;
+    grid-template-rows: 80px 4fr 0.5fr; 
+    gap: 0px 0px;
+    grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+}

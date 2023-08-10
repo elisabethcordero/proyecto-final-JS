@@ -1,0 +1,44 @@
+
+.footer{
+    display: flex; 
+    flex-direction: column; 
+    align-self: flex-end;
+    justify-content: start ; 
+    align-items: center;
+    grid-area: footer;
+    padding-top: 30px;
+    background: $bg_grad;
+    height: auto;
+    font-size: 18px;
+    box-shadow: 0 3px 15px rgba(35,35,35,.9);
+    padding-bottom: 50px;
+    img{
+      &:hover{
+        transform: rotate(360deg);
+        transition: all 1s;
+      }
+    }
+    .direccionFooter {
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+    .iconosRedes {
+      a {
+        padding: 7px;
+        img {
+          margin-top: 12px;
+          width: 40px;
+          height: 40px;
+          &:hover{
+            opacity: 3;
+            transform: scale(2);
+          } 
+        }
+        
+      }
+    }
+    
+    
+}
