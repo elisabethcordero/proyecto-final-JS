@@ -18,3 +18,20 @@ export function actualizarCarrito(carrito, producto, cantidad) {
         timer: 1500
       })
 }
+
+export function eliminarProductoCarrito(producto){
+    let carrito = obtenerCarrito();
+    let carritoActualizado = carrito.filter(c => c.id != producto.id);
+
+    localStorage.setItem("carrito", JSON.stringify(carritoActualizado));
+}
+
+export function obtenerCarrito(){
+    let local = localStorage.getItem("carrito");
+
+    if (local === null)
+        return []
+    
+    return JSON.parse(local)
+
+}
