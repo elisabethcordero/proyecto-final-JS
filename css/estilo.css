@@ -48,7 +48,9 @@ body {
   grid-template-columns: 0.3fr 1.2fr 1fr;
   grid-template-rows: 80px 4fr 0.5fr;
   gap: 0px 0px;
-  grid-template-areas: "header header header" "aside main main" "footer footer footer"; }
+  grid-template-areas: "header header header"
+ "aside main main"
+ "footer footer footer"; }
 
 .header {
   grid-area: header; }
@@ -157,10 +159,34 @@ body {
         opacity: 3;
         transform: scale(2); }
 
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
+}
+#lblCartCount {
+    font-size: 0.7rem;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+    padding: 2px
+}
+
 @media only screen and (max-width: 768px) {
   .grid-container {
     grid-template-columns: 0.4fr 1.2fr 1fr;
-    grid-template-areas: "header header header" "main main main" "footer footer footer";
+    grid-template-areas: "header header header"
+ "main main main"
+ "footer footer footer";
     display: flex;
     flex-direction: column; }
   .navHeader {

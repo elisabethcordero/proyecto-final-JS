@@ -1,16 +1,23 @@
 
-import { eliminarProductoCarrito, obtenerCarrito } from "./carrito.js"
+import { actualizarCarrito, cantidadItemsCarrito, eliminarProductoCarrito, obtenerCarrito } from "./carrito.js"
+
+const lblCantidadCarrito = document.getElementById("lblCartCount");
 
 const listarCarrito = () => {
     const tablaBody = document.getElementById("tablaBody")
     const carrito = obtenerCarrito()
+    console.log(carrito)
     tablaBody.innerHTML = "";
-    
+
     for (let item of carrito){
         tablaBody.innerHTML+=`<tr>
             <td>${item.id}</td>
             <td>${item.descripcion}</td>
-            <td>${item.cantidad}</td>
+            <td class="d-flex flex-row">
+                <input type="number" class="form-control form-control-sm w-25" id="cantidad${item.id}" value="${item.cantidad}" disabled/>
+                <input type="button" class="btn btn-info ms-2 addOneClass" value="+" productid="${item.id}" />
+                <input type="button" class="btn btn-info ms-2 delOneClass" value="-" productid="${item.id}" />
+            </td>
             <td>${item.precio}</td>
             <td>${item.precio*item.cantidad}</td>
             <td>
@@ -20,6 +27,7 @@ const listarCarrito = () => {
             </td>
         </tr>`
     }
+    lblCantidadCarrito.innerText = cantidadItemsCarrito();
 }
 
 document.addEventListener("click", (event) => {
@@ -33,6 +41,27 @@ document.addEventListener("click", (event) => {
             eliminarProductoCarrito(producto);
             listarCarrito();
         }
+    }
+
+    if (elemento.classList.contains("addOneClass")){
+        
+        let id = elemento.getAttribute("productid");
+        
+        const carrito = obtenerCarrito()
+        let producto = carrito.find(c => c.id == id);
+        
+        actualizarCarrito(producto, 1)
+        listarCarrito();
+    }
+
+    if (elemento.classList.contains("delOneClass")){
+        let id = elemento.getAttribute("productid");
+        
+        const carrito = obtenerCarrito()
+        let producto = carrito.find(c => c.id == id);
+        
+        actualizarCarrito(producto, -1)
+        listarCarrito();
     }
 
 })

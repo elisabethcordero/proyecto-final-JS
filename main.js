@@ -1,8 +1,9 @@
 import { Producto } from "./js/producto.js";
 import { Catalogo } from "./js/catalogo.js";
-import { actualizarCarrito } from "./js/carrito.js";
+import { actualizarCarrito, cantidadItemsCarrito } from "./js/carrito.js";
 
 const seccionProductos = document.getElementById("seccionProductos");
+const lblCantidadCarrito = document.getElementById("lblCartCount");
 const botonesAgregarProducto = document.getElementsByClassName("productButton");
 const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 const catalogo = new Catalogo();
@@ -22,6 +23,9 @@ for(let boton of botonesAgregarProducto){
         let id = parseInt(event.target.value);
         let producto = catalogo.obtenerProducto(id);
         let inputCantidad = document.getElementById("cantidad"+id);
-        actualizarCarrito(carrito, producto, parseInt(inputCantidad.value))        
+        actualizarCarrito(producto, parseInt(inputCantidad.value))
+        lblCantidadCarrito.innerText = cantidadItemsCarrito();
     });
 }
+
+lblCantidadCarrito.innerText = cantidadItemsCarrito();
