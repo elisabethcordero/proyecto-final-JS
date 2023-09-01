@@ -29,3 +29,9 @@ for(let boton of botonesAgregarProducto){
 }
 
 lblCantidadCarrito.innerText = cantidadItemsCarrito();
+
+var alertElement = document.getElementById("alert");
+alertElement.style.display = "block";
+setTimeout(function() {
+    alertElement.style.display = "none";
+}, 4000);

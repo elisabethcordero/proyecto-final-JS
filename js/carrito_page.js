@@ -37,10 +37,23 @@ document.addEventListener("click", (event) => {
         let id = elemento.getAttribute("value");
         const carrito = obtenerCarrito()
         let producto = carrito.find(c => c.id == id);
-        if (confirm(`Quitar del carrito el producto "${producto.descripcion}"?`)) {
-            eliminarProductoCarrito(producto);
-            listarCarrito();
-        }
+       
+        Swal.fire({
+            title: `Quitar del carrito el producto "${producto.descripcion}"?`,
+            text: "",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, eliminar!', 
+            cancelButtonText: 'Cancelar',
+
+          }).then((result) => {
+            if (result.isConfirmed) {
+                eliminarProductoCarrito(producto);
+                listarCarrito();
+            }
+          })
     }
 
     if (elemento.classList.contains("addOneClass")){
