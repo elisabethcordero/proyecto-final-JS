@@ -1,12 +1,12 @@
 export class Producto {
 
-    constructor(id, descripcion, color, precio, stock, imagen = ""){
+    constructor({id, description, color, price, stock, image = ""}){
         this.id = id
-        this.descripcion = descripcion
+        this.descripcion = description
         this.color = color
-        this.precio = precio
+        this.precio = price
         this.stock = stock
-        this.imagen = imagen
+        this.imagen = image
     }
 
     obtenerPrecioConDescuento () {
